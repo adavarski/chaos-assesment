@@ -1,6 +1,6 @@
 Scenario:
 ```
-Your assignment is to write a standard web service that serves a straightforward API. The service has to be containerized. It will act as a small microservice displaying greeting text based on a query parameter.
+Write a standard web service that serves a straightforward API. The service has to be containerized. It will act as a small microservice displaying greeting text based on a query parameter.
 
 Requirements:
 Programming Language & Framework:
