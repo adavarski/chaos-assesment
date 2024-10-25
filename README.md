@@ -68,6 +68,6 @@ $ curl "http://localhost:8080/health"
 
 #### 5. Add a CI/CD pipeline script (GitHub Actions) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
 
-Builds and tests the Docker container with GitHub Actions (we need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
+Builds and tests the Docker container with GitHub Actions.
 
 GitHub Actions output -> https://github.com/adavarski/chaos-assesment/actions/runs/11519767631
