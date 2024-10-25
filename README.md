@@ -70,5 +70,4 @@ $ curl "http://localhost:8080/health"
 
 Builds and tests the Docker container with GitHub Actions (we need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
 
-GitHub Actions output -> [https://github.com/adavarski/chaos-assesment/actions/runs/11515827643
-](https://github.com/adavarski/chaos-assesment/actions/runs/11518957588)
+GitHub Actions output -> https://github.com/adavarski/chaos-assesment/actions/runs/11519767631
