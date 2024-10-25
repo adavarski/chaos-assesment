@@ -1,4 +1,3 @@
-
 ```
 Scenario:
 ========
@@ -29,6 +28,7 @@ Bonus:
 Create a health check (GET /health) for the service that accepts a request and returns a JSON response regarding the status of the service (e.g., severity level returned as {"status": "ok"}).
 Add a CI/CD pipeline script (e.g., GitHub Actions, Jenkins, Gitlab) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
 ```
+Task steps:
 
 1. Create the Web Service (File: app.py)
 
@@ -36,12 +36,9 @@ Defines two endpoints, /greet and /health.
 /greet returns a personalized greeting or a default message if the name parameter is missing.
 /health checks the server status, returning {"status": "ok"} for monitoring.
 
-2. Dockerize the Application
-File: Dockerfile
+2. Dockerize the Application (File: Dockerfile)
 
-Uses python:3.9-slim for a smaller image.
-Installs Flask and sets up the /app directory.
-Exposes port 8080 and runs app.py.
+Note: Uses python:3.9-slim for a smaller image. Installs Flask and sets up the /app directory. Exposes port 8080 and runs app.py.
 
 3. Build and Run the Docker Container
 
@@ -55,17 +52,15 @@ Run the Docker container:
 ```
 docker run -p 8080:8080 greet-app
 ```
-Test the endpoints:
+Test endpoints:
 
-Open a browser or use curl:
+Use curl for testing:
 ```
 $ curl "http://localhost:8080/greet?name=adavarski"
 {"message":"Hello adavarski!"}
 
 $ curl "http://localhost:8080/greet"
 
-
-https://github.com/adavarski/chaos-assesment/actions/runs/11515790817
 {"message":"Now everyone can be a hero..."}
 
 $ curl "http://localhost:8080/health"
@@ -75,5 +70,5 @@ $ curl "http://localhost:8080/health"
 Builds and tests the Docker container with GitHub Actions:
 Pushes the image to DockerHub if all tests pass (you need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
 
-https://github.com/adavarski/chaos-assesment/actions/runs/11515827643
+GitHub Actions -> https://github.com/adavarski/chaos-assesment/actions/runs/11515827643
 
