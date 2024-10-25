@@ -1,5 +1,5 @@
 Scenario:
-
+```
 Your assignment is to write a standard web service that serves a straightforward API. The service has to be containerized. It will act as a small microservice displaying greeting text based on a query parameter.
 
 Requirements:
@@ -21,7 +21,7 @@ Make sure that the docker image is relatively thin and well-optimized.
 Testing & Validation:
 Open a web browser and ensure the service is available at http://localhost:8080/greet?name=YourName.
 Test the service by sending a few requests using different name values.
-
+```
 
 Bonus:
 Create a health check (GET /health) for the service that accepts a request and returns a JSON response regarding the status of the service (e.g., severity level returned as {"status": "ok"}).
