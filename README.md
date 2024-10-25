@@ -45,12 +45,12 @@ Note: Uses python:3.9-slim for a smaller image. Installs Flask and sets up the /
 Build the Docker image:
 
 ```
-docker build -t greet-app .
+docker build -t hello-app .
 ```
 Run the Docker container:
 
 ```
-docker run -p 8080:8080 greet-app
+docker run -p 8080:8080 hello-app
 ```
 4. Test endpoints:
 
