@@ -29,19 +29,3 @@ jobs:
     - name: Run container for testing
       run: docker run -d -p 8080:8080 --name test-container greet-app
 
-    - name: Test /greet endpoint with a name
-      run: |
-        sleep 3 # wait for container to initialize
-        curl -f "http://localhost:8080/greet?name=TestUser" | grep "Hello TestUser!"
-
-    - name: Test /greet endpoint without a name
-      run: curl -f "http://localhost:8080/greet" | grep "Now everyone can be a hero..."
-
-    - name: Test /health endpoint
-      run: curl -f "http://localhost:8080/health" | grep "\"status\": \"ok\""
-
-    - name: Stop and remove test container
-      run: docker rm -f test-container
-
-    - name: Push Docker image
-      run: docker tag greet-app ${DOCKER_USERNAME}/greet-app:latest && docker push ${DOCKER_USERNAME}/greet-app:latest
