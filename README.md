@@ -63,9 +63,17 @@ $ curl "http://localhost:8080/greet?name=adavarski"
 {"message":"Hello adavarski!"}
 
 $ curl "http://localhost:8080/greet"
+
+
+https://github.com/adavarski/chaos-assesment/actions/runs/11515790817
 {"message":"Now everyone can be a hero..."}
 
 $ curl "http://localhost:8080/health"
+
+
+Builds and tests the Docker container.
+Pushes the image to DockerHub if all tests pass (you need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
+
 {"status":"ok"}
 
 
