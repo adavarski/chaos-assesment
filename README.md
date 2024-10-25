@@ -52,7 +52,7 @@ Run the Docker container:
 ```
 docker run -p 8080:8080 greet-app
 ```
-Test endpoints:
+4. Test endpoints:
 
 Use curl for testing:
 ```
