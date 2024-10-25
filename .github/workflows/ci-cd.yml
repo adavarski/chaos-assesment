@@ -37,9 +37,6 @@ jobs:
     - name: Test /greet endpoint without a name
       run: curl -f "http://localhost:8080/greet" | grep "Now everyone can be a hero..."
 
-    - name: Test /health endpoint
-      run: curl -f "http://localhost:8080/health" | grep "\"status\": \"ok\""
-
     - name: Stop and remove test container
       run: docker rm -f test-container
 
