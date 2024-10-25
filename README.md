@@ -30,17 +30,17 @@ Add a CI/CD pipeline script (e.g., GitHub Actions, Jenkins, Gitlab) that builds 
 ```
 Task steps:
 
-1. Create the Web Service (File: app.py)
+#### 1. Create the Web Service (File: app.py)
 
 Defines two endpoints, /greet and /health.
 /greet returns a personalized greeting or a default message if the name parameter is missing.
 /health checks the server status, returning {"status": "ok"} for monitoring.
 
-2. Dockerize the Application (File: Dockerfile)
+#### 2. Dockerize the Application (File: Dockerfile)
 
 Note: Uses python:3.9-slim for a smaller image. Installs Flask and sets up the /app directory. Exposes port 8080 and runs app.py.
 
-3. Build and Run the Docker Container
+#### 3. Build and Run the Docker Container
 
 Build the Docker image:
 
@@ -52,7 +52,7 @@ Run the Docker container:
 ```
 docker run -p 8080:8080 hello-app
 ```
-4. Test endpoints:
+#### 4. Test endpoints:
 
 Use curl for testing:
 ```
@@ -66,7 +66,7 @@ $ curl "http://localhost:8080/health"
 {"status":"ok"}
 ```
 
-5. Add a CI/CD pipeline script (GitHub Actions) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
+#### 5. Add a CI/CD pipeline script (GitHub Actions) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
 
 Builds and tests the Docker container with GitHub Actions (we need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
 
