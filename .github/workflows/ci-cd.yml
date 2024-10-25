@@ -40,3 +40,5 @@ jobs:
     - name: Stop and remove test container
       run: docker rm -f test-container
 
+    - name: Push Docker image
+      run: docker push ${DOCKER_USERNAME}/greet-app
