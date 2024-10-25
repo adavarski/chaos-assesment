@@ -27,9 +27,7 @@ Create a health check (GET /health) for the service that accepts a request and r
 Add a CI/CD pipeline script (e.g., GitHub Actions, Jenkins, Gitlab) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
 ```
 
-Step 1: Create the Web Service
-File: app.py
-This script:
+Step 1: Create the Web Service (File: app.py)
 
 Defines two endpoints, /greet and /health.
 /greet returns a personalized greeting or a default message if the name parameter is missing.
@@ -37,11 +35,11 @@ Defines two endpoints, /greet and /health.
 
 Step 2: Dockerize the Application
 File: Dockerfile
-This Dockerfile:
 
 Uses python:3.9-slim for a smaller image.
 Installs Flask and sets up the /app directory.
 Exposes port 8080 and runs app.py.
+
 Step 3: Build and Run the Docker Container
 
 Build the Docker image:
@@ -56,7 +54,7 @@ docker run -p 8080:8080 greet-app
 ```
 Test the endpoints:
 
-Test the /greet endpoint:
+Test the endpoints:
 
 Open a browser or use curl:
 ```
