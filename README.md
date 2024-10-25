@@ -60,7 +60,6 @@ $ curl "http://localhost:8080/greet?name=adavarski"
 {"message":"Hello adavarski!"}
 
 $ curl "http://localhost:8080/greet"
-
 {"message":"Now everyone can be a hero..."}
 
 $ curl "http://localhost:8080/health"
