@@ -21,9 +21,8 @@ Make sure that the docker image is relatively thin and well-optimized.
 Testing & Validation:
 Open a web browser and ensure the service is available at http://localhost:8080/greet?name=YourName.
 Test the service by sending a few requests using different name values.
-```
 
 Bonus:
 Create a health check (GET /health) for the service that accepts a request and returns a JSON response regarding the status of the service (e.g., severity level returned as {"status": "ok"}).
 Add a CI/CD pipeline script (e.g., GitHub Actions, Jenkins, Gitlab) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
-
+```
