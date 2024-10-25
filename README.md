@@ -71,7 +71,7 @@ https://github.com/adavarski/chaos-assesment/actions/runs/11515790817
 $ curl "http://localhost:8080/health"
 
 
-Builds and tests the Docker container.
+Builds and tests the Docker container with GitHub Actions:
 Pushes the image to DockerHub if all tests pass (you need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
 
 [{"status":"ok"}
