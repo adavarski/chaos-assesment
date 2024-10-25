@@ -66,8 +66,9 @@ $ curl "http://localhost:8080/health"
 {"status":"ok"}
 ```
 
-Builds and tests the Docker container with GitHub Actions:
-Pushes the image to DockerHub if all tests pass (you need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
+4. Add a CI/CD pipeline script (GitHub Actions) that builds a Docker image, starts the service, and runs a basic test suite against the running container.
 
-GitHub Actions -> https://github.com/adavarski/chaos-assesment/actions/runs/11515827643
+Builds and tests the Docker container with GitHub Actions && Pushes the image to DockerHub if all tests pass (we need to set DOCKER_USERNAME and DOCKER_PASSWORD as GitHub secrets).
+
+GitHub Actions output -> https://github.com/adavarski/chaos-assesment/actions/runs/11515827643
 
