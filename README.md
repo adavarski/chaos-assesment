@@ -70,4 +70,4 @@ $ curl "http://localhost:8080/health"
 
 Builds and tests the Docker container with GitHub Actions.
 
-GitHub Actions output -> https://github.com/adavarski/chaos-assesment/actions/runs/11519767631
+### GitHub Actions output -> https://github.com/adavarski/chaos-assesment/actions/runs/
