@@ -1,0 +1,45 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+stages:
+  - build
+  - test
+  - deploy
+
+before_script:
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+
+build:
+  stage: build
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE:latest" .
+    - docker push "$CI_REGISTRY_IMAGE:latest"
+
+test:
+  stage: test
+  script:
+    # Run the Docker container in detached mode
+    - docker run -d -p 8080:8080 --name test-container "$CI_REGISTRY_IMAGE:latest"
+    - sleep 5  # wait for the server to start
+
+    # Test /greet endpoint with name
+    - curl -f "http://localhost:8080/greet?name=TestUser" | grep "Hello TestUser!"
+
+    # Test /greet endpoint without name
+    - curl -f "http://localhost:8080/greet" | grep "Now everyone can be a hero..."
+
+    # Test /health endpoint
+    - curl -f "http://localhost:8080/health" | grep "\"status\": \"ok\""
+
+    # Stop and remove the test container
+    - docker rm -f test-container
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploy step (optional) - Implement as needed for your environment"
