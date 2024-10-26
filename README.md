@@ -50,7 +50,7 @@ docker build -t hello-app .
 Run the Docker container:
 
 ```
-docker run -p 8080:8080 hello-app
+docker run -d -p 8080:8080 hello-app
 ```
 #### 4. Test endpoints:
 
